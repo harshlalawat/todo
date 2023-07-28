@@ -8,7 +8,6 @@ newTodo.addEventListener("keypress", function(event){
         event.preventDefault();
     if(newTodoValue){
         saveTodo(newTodoValue,function(err){
-            
             if(err){
                 console.log(err);
             }else{
@@ -70,7 +69,6 @@ function addTodoToDOM(newTodo, isCompleted){
     btn.name = "";
     btn.value = "x";
     child2Div.appendChild(btn);
-
 }
 
 function handleClick(clickedItem){
@@ -124,7 +122,6 @@ function handleDelete(clickedItem){
 }
 
 function showTodo(){
-
     fetch("/todos")
     .then(function(response){
         if(response.status !== 200){
@@ -132,7 +129,6 @@ function showTodo(){
         }
         return response.json();
     }).then(function(todos){
-        // console.log(todos);
         todos.forEach(function(element) {
             addTodoToDOM(element.todo, element.isCompleted);
         });
