@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href= "css/styles.css">
+</head>
+
+<body>
+  <h1>Todo List</h1>
+    <div class="container">
+        <div id="left-pane">
+          <h2>Task List</h2>
+          <ul id="todoList"> 
+            <!-- <li class="list-item">
+              <div class="container li-parent-div">
+                <div class="a">hlo</div> 
+                <div class="b">
+                  <input type="checkbox" onclick="handleClick(this)" class="checkbox">
+                  <input type="button" value="x" onclick="handleDelete(this)">
+                </div>
+              </div>
+            </li> -->
+        </ul>
+        </div>
+        <div id="right-pane">
+          <h2>Add Task</h2>
+          <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="text" id="newTodo" placeholder="Enter task" value="" name="todoItem"/>
+            <input type="file" id="newImg" name="imgURL"/>
+            <p></p>
+            <button type="submit" id="submitBtn" class="btn">Submit</button>
+          </form>
+          
+        </div>
+      </div>
+      <script src="js/todo.js"></script>
+  </body>
+</html>
